@@ -32,8 +32,8 @@ var CardListContainer = React.createClass({
         }
     },
     render: function() {
-        return <CardList onAddSubmit={this.onAddSubmit}
-                     onCardClick={this.onCardClick} listTitle="title"/>;
+        return <CardList cards={this.state.cards} onAddSubmit={this.onAddSubmit}
+                     onCardClick={this.onCardClick} listTitle={this.props.listTitle}/>;
     }
 });
 

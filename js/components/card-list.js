@@ -21,6 +21,7 @@ var CardList = React.createClass({
                 <Card />
                 
                 <form>
+                    <h2>Add a Card</h2>
                     <input type="text" onChange={this.props.onAddInputChanged} />
                     <input type="submit" onClick={this.props.onAddSubmit} />
                 </form>
@@ -29,5 +30,9 @@ var CardList = React.createClass({
         );
     }
 });
+
+CardList.defaultProps = {
+    listTitle: 'Default Title'
+};
 
 module.exports = CardList;
