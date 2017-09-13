@@ -9,6 +9,14 @@ var CardListContainer = React.createClass({
         }
     },
 
+    onAddInputChanged: function() {
+        console.log("onAddInputChanged");
+    },
+
+    onAddSubmit: function(event) {
+        console.log("onAddSubmit");
+        event.preventDefault()
+    },
     onCardClick: function() {
         if (this.state.selected == 'english') {
             this.setState({
@@ -24,8 +32,8 @@ var CardListContainer = React.createClass({
         }
     },
     render: function() {
-        return <CardList cards={this.cards}
-                     onClick={this.onCardClick} />;
+        return <CardList onAddSubmit={this.onAddSubmit}
+                     onCardClick={this.onCardClick} listTitle="title"/>;
     }
 });
 

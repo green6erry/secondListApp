@@ -3,19 +3,12 @@ var React = require('react');
 var Card = require('./card');
 
 var CardList = React.createClass({
-    
-    onAddInputChanged: function() {
-        console.log("onAddInputChanged");
-    },
 
-    onAddSubmit: function() {
-        console.log("onAddSubmit");
-    },
 
     render: function() {
         return (
             <div className="card-list">
-                <h2>{props.listTitle}</h2>
+                <h2>{this.props.listTitle}</h2>
                 <Card name="Ace"
                         imageUrl="http://estopoker.com/images/deck/classic/ha.svg"
                         job="Male model" />
@@ -27,9 +20,9 @@ var CardList = React.createClass({
                         job="Lady" />
                 <Card />
                 
-                <form onsubmit="event.preventDefault()">
-                    <input type="text" onChange={this.onAddInputChanged} />
-                    <input type="submit" onClick={this.onAddSubmit} />
+                <form>
+                    <input type="text" onChange={this.props.onAddInputChanged} />
+                    <input type="submit" onClick={this.props.onAddSubmit} />
                 </form>
                         
             </div>

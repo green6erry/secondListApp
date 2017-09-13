@@ -5,8 +5,8 @@ require('babel-polyfill');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var CardList = require('./components/list-board');
+var ListBoard = require('./components/list-board');
 
 document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(<CardList />, document.getElementById('app'));
+    ReactDOM.render(<ListBoard />, document.getElementById('app'));
 });

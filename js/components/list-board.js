@@ -9,9 +9,7 @@ var ListBoard = React.createClass({
         return (
             <div className="list-board">
                <h1>Board</h1>
-               <CardList listTitle="First" />
-                <CardList listTitle="Second" />
-                <CardList listTitle="Third" />
+               <CardListContainer />
                 <Surprise />
                 <FlashCardOne />
             </div>
